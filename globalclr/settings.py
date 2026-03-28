@@ -10,9 +10,9 @@ SECRET_KEY = 'django-insecure-332+)!7sygy4bh5icu(%%!fi7wdn)skp0(4^4q1pbp^444gbl=
 DEBUG = False  # IMPORTANT for production
 
 ALLOWED_HOSTS = [
-    'globalcarrier.onrender.com',
-    'localhost',
-    '127.0.0.1'
+    'globalcarrierinfo.in',
+    'www.globalcarrierinfo.in',
+    'https://global-md7b.onrender.com'
 ]
 
 
