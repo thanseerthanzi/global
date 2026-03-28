@@ -1,6 +1,6 @@
 /**
-* Template Name: Medilab
-* Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
+* Template Name: Mentor
+* Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
 * Updated: Aug 07 2024 with Bootstrap v5.3.3
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
@@ -12,35 +12,35 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Poppins",  sans-serif;
-  --nav-font: "Raleway",  sans-serif;
+  --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #2c4964; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #1977cc; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --heading-color: #37423b; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #5fcf80; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #2c4964;  /* The default color of the main navmenu links */
-  --nav-hover-color: #1977cc; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-color: #272828;  /* The default color of the main navmenu links */
+  --nav-hover-color: #5fcf80; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #2c4964; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #1977cc; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-color: #272828; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #5fcf80; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f1f7fc;
+  --background-color: #f9f9f9;
   --surface-color: #ffffff;
 }
 
@@ -85,6 +85,58 @@ h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
+}
+
+/* PHP Email Form Messages
+------------------------------*/
+.php-email-form .error-message {
+  display: none;
+  background: #df1529;
+  color: #ffffff;
+  text-align: left;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.php-email-form .sent-message {
+  display: none;
+  color: #ffffff;
+  background: #059652;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.php-email-form .loading {
+  display: none;
+  background: var(--surface-color);
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+}
+
+.php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid var(--accent-color);
+  border-top-color: var(--surface-color);
+  animation: php-email-form-loading 1s linear infinite;
+}
+
+@keyframes php-email-form-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Pulsating Play Button
@@ -166,119 +218,15 @@ h6 {
   }
 }
 
-/* PHP Email Form Messages
-------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
-}
-
-@keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 15px 0;
   transition: all 0.5s;
   z-index: 997;
-  background-color: var(--background-color);
-}
-
-.header .topbar {
-  background-color: var(--accent-color);
-  height: 40px;
-  padding: 0;
-  font-size: 14px;
-  transition: all 0.5s;
-}
-
-.header .topbar .contact-info i {
-  font-style: normal;
-  color: var(--contrast-color);
-}
-
-.header .topbar .contact-info i a,
-.header .topbar .contact-info i span {
-  padding-left: 5px;
-  color: var(--contrast-color);
-}
-
-@media (max-width: 575px) {
-
-  .header .topbar .contact-info i a,
-  .header .topbar .contact-info i span {
-    font-size: 13px;
-  }
-}
-
-.header .topbar .contact-info i a {
-  line-height: 0;
-  transition: 0.3s;
-}
-
-.header .topbar .contact-info i a:hover {
-  color: var(--contrast-color);
-  text-decoration: underline;
-}
-
-.header .topbar .social-links a {
-  color: color-mix(in srgb, var(--contrast-color), transparent 40%);
-  line-height: 0;
-  transition: 0.3s;
-  margin-left: 20px;
-}
-
-.header .topbar .social-links a:hover {
-  color: var(--contrast-color);
-}
-
-.header .branding {
-  min-height: 60px;
-  padding: 10px 0;
 }
 
 .header .logo {
@@ -291,14 +239,16 @@ h6 {
 }
 
 .header .logo h1 {
+  font-weight: 700;
   font-size: 30px;
   margin: 0;
-  font-weight: 700;
-  color: var(--heading-color);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent-color);
 }
 
-.header .cta-btn,
-.header .cta-btn:focus {
+.header .btn-getstarted,
+.header .btn-getstarted:focus {
   color: var(--contrast-color);
   background: var(--accent-color);
   font-size: 14px;
@@ -308,8 +258,8 @@ h6 {
   transition: 0.3s;
 }
 
-.header .cta-btn:hover,
-.header .cta-btn:focus:hover {
+.header .btn-getstarted:hover,
+.header .btn-getstarted:focus:hover {
   color: var(--contrast-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
@@ -319,7 +269,7 @@ h6 {
     order: 1;
   }
 
-  .header .cta-btn {
+  .header .btn-getstarted {
     order: 2;
     margin: 0 15px 0 0;
     padding: 6px 15px;
@@ -334,16 +284,10 @@ h6 {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 
-.scrolled .header .topbar {
-  height: 0;
-  visibility: hidden;
-  overflow: hidden;
-}
-
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-/* Desktop Navigation */
+/* Navmenu - Desktop */
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
@@ -361,20 +305,11 @@ h6 {
     position: relative;
   }
 
-  .navmenu>ul>li {
-    white-space: nowrap;
-    padding: 15px 14px;
-  }
-
-  .navmenu>ul>li:last-child {
-    padding-right: 0;
-  }
-
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
-    font-size: 15px;
-    padding: 0 2px;
+    padding: 18px 15px;
+    font-size: 16px;
     font-family: var(--nav-font);
     font-weight: 400;
     display: flex;
@@ -382,7 +317,6 @@ h6 {
     justify-content: space-between;
     white-space: nowrap;
     transition: 0.3s;
-    position: relative;
   }
 
   .navmenu a i,
@@ -393,24 +327,8 @@ h6 {
     transition: 0.3s;
   }
 
-  .navmenu>ul>li>a:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -6px;
-    left: 0;
-    background-color: var(--nav-hover-color);
-    visibility: hidden;
-    width: 0px;
-    transition: all 0.3s ease-in-out 0s;
-  }
-
-  .navmenu a:hover:before,
-  .navmenu li:hover>a:before,
-  .navmenu .active:before {
-    visibility: visible;
-    width: 100%;
+  .navmenu li:last-child a {
+    padding-right: 0;
   }
 
   .navmenu li:hover>a,
@@ -476,7 +394,7 @@ h6 {
   }
 }
 
-/* Mobile Navigation */
+/* Navmenu - Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
@@ -608,8 +526,8 @@ h6 {
 .footer {
   color: var(--default-color);
   background-color: var(--background-color);
-  border-top: 1px solid color-mix(in srgb, var(--accent-color), transparent 75%);
   font-size: 14px;
+  padding-bottom: 50px;
   position: relative;
 }
 
@@ -618,8 +536,7 @@ h6 {
 }
 
 .footer .footer-about .logo {
-  line-height: 1;
-  margin-bottom: 25px;
+  margin-bottom: 0;
 }
 
 .footer .footer-about .logo img {
@@ -628,11 +545,11 @@ h6 {
 }
 
 .footer .footer-about .logo span {
-  color: var(--heading-color);
-  font-family: var(--heading-font);
   font-size: 26px;
   font-weight: 700;
   letter-spacing: 1px;
+  font-family: var(--heading-font);
+  color: var(--heading-color);
 }
 
 .footer .footer-about p {
@@ -649,7 +566,7 @@ h6 {
   border-radius: 50%;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin-right: 10px;
   transition: 0.3s;
 }
@@ -706,10 +623,53 @@ h6 {
   margin-bottom: 5px;
 }
 
+.footer .footer-newsletter .newsletter-form {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding: 6px 8px;
+  position: relative;
+  border-radius: 50px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  display: flex;
+  background-color: var(--surface-color);
+  transition: 0.3s;
+}
+
+.footer .footer-newsletter .newsletter-form:focus-within {
+  border-color: var(--accent-color);
+}
+
+.footer .footer-newsletter .newsletter-form input[type=email] {
+  border: 0;
+  padding: 4px 8px;
+  width: 100%;
+  background-color: var(--surface-color);
+  color: var(--default-color);
+}
+
+.footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
+  outline: none;
+}
+
+.footer .footer-newsletter .newsletter-form input[type=submit] {
+  border: 0;
+  font-size: 16px;
+  padding: 0 20px 2px 20px;
+  margin: -7px -8px -7px 0;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  transition: 0.3s;
+  border-radius: 50px;
+}
+
+.footer .footer-newsletter .newsletter-form input[type=submit]:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
 .footer .copyright {
   padding-top: 25px;
   padding-bottom: 25px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
 }
 
 .footer .copyright p {
@@ -717,7 +677,7 @@ h6 {
 }
 
 .footer .credits {
-  margin-top: 8px;
+  margin-top: 6px;
   font-size: 13px;
 }
 
@@ -764,12 +724,12 @@ h6 {
   visibility: hidden;
   opacity: 0;
   right: 15px;
-  bottom: 15px;
+  bottom: -15px;
   z-index: 99999;
   background-color: var(--accent-color);
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
   transition: all 0.4s;
 }
 
@@ -787,6 +747,7 @@ h6 {
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
+  bottom: 15px;
 }
 
 /*--------------------------------------------------------------
@@ -802,6 +763,9 @@ h6 {
 # Global Page Titles & Breadcrumbs
 --------------------------------------------------------------*/
 .page-title {
+  --default-color: var(--contrast-color);
+  --background-color: var(--accent-color);
+  --heading-color: var(--contrast-color);
   color: var(--default-color);
   background-color: var(--background-color);
   position: relative;
@@ -809,7 +773,7 @@ h6 {
 
 .page-title .heading {
   padding: 80px 0;
-  border-top: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%);
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .page-title .heading h1 {
@@ -818,8 +782,12 @@ h6 {
 }
 
 .page-title nav {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 94%);
+  background-color: color-mix(in srgb, var(--accent-color) 90%, black 5%);
   padding: 20px 0;
+}
+
+.page-title nav a {
+  color: var(--default-color);
 }
 
 .page-title nav ol {
@@ -850,7 +818,7 @@ section,
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 60px 0;
-  scroll-margin-top: 72px;
+  scroll-margin-top: 900px;
   overflow: clip;
 }
 
@@ -858,7 +826,7 @@ section,
 
   section,
   .section {
-    scroll-margin-top: 60px;
+    scroll-margin-top: 66px;
   }
 }
 
@@ -866,47 +834,38 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
-  text-align: center;
   padding-bottom: 60px;
   position: relative;
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 14px;
   font-weight: 500;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  padding: 0;
+  line-height: 1px;
+  margin: 0;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
   position: relative;
-}
-
-.section-title h2:before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 160px;
-  height: 1px;
-  background: color-mix(in srgb, var(--default-color), transparent 60%);
-  left: 0;
-  right: 0;
-  bottom: 1px;
-  margin: auto;
 }
 
 .section-title h2::after {
   content: "";
-  position: absolute;
-  display: block;
-  width: 60px;
-  height: 3px;
+  width: 120px;
+  height: 1px;
+  display: inline-block;
   background: var(--accent-color);
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
+  margin: 4px 10px;
 }
 
 .section-title p {
-  margin-bottom: 0;
+  color: var(--heading-color);
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: var(--nav-font);
+  text-transform: uppercase;
 }
 
 /*--------------------------------------------------------------
@@ -914,13 +873,13 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: calc(100vh - 112px);
+  min-height: 80vh;
+  position: relative;
   padding: 80px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
+  color: var(--default-color);
 }
 
 .hero img {
@@ -933,84 +892,57 @@ section,
   z-index: 1;
 }
 
+.hero:before {
+  content: "";
+  background: color-mix(in srgb, var(--background-color), transparent 60%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
 .hero .container {
+  position: relative;
   z-index: 3;
 }
 
-.hero .welcome h2 {
+.hero h2 {
   margin: 0;
   font-size: 48px;
   font-weight: 700;
 }
 
-.hero .welcome p {
+.hero p {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin: 10px 0 0 0;
   font-size: 24px;
-  margin: 0;
 }
 
-.hero .content {
-  margin-top: 40px;
-}
-
-.hero .content .why-box {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  padding: 30px;
-  border-radius: 4px;
-}
-
-.hero .content .why-box h3 {
-  color: var(--contrast-color);
-  font-weight: 700;
-  font-size: 34px;
-  margin-bottom: 30px;
-}
-
-.hero .content .why-box p {
-  margin-bottom: 30px;
-}
-
-.hero .content .why-box .more-btn {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--contrast-color), transparent 80%);
-  display: inline-block;
-  padding: 6px 30px 8px 30px;
-  border-radius: 50px;
-  transition: all ease-in-out 0.4s;
-}
-
-.hero .content .why-box .more-btn i {
-  font-size: 14px;
-}
-
-.hero .content .why-box .more-btn:hover {
-  background: var(--surface-color);
-  color: var(--accent-color);
-}
-
-.hero .content .icon-box {
-  text-align: center;
-  border-radius: 10px;
-  background: color-mix(in srgb, var(--surface-color), transparent 20%);
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  padding: 40px 30px;
-  width: 100%;
-}
-
-.hero .content .icon-box i {
-  font-size: 40px;
-  color: var(--accent-color);
-}
-
-.hero .content .icon-box h4 {
-  font-size: 20px;
-  font-weight: 700;
-  margin: 10px 0 20px 0;
-}
-
-.hero .content .icon-box p {
+.hero .btn-get-started {
+  font-weight: 500;
   font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 35px 10px 35px;
+  border-radius: 50px;
+  transition: 0.4s;
+  margin-top: 30px;
+  border: 2px solid var(--default-color);
+  color: var(--default-color);
+}
+
+.hero .btn-get-started:hover {
+  background: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1027,505 +959,366 @@ section,
 }
 
 .about .content ul li {
-  display: flex;
-  align-items: flex-start;
-  margin-top: 40px;
+  padding-bottom: 10px;
 }
 
 .about .content ul i {
-  flex-shrink: 0;
-  font-size: 48px;
+  font-size: 1.25rem;
+  margin-right: 4px;
   color: var(--accent-color);
-  margin-right: 20px;
-}
-
-.about .content ul h5 {
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.about .content ul p {
-  font-size: 15px;
 }
 
 .about .content p:last-child {
   margin-bottom: 0;
 }
 
-.about .pulsating-play-btn {
-  position: absolute;
-  left: calc(50% - 47px);
-  top: calc(50% - 47px);
-}
-
-/*--------------------------------------------------------------
-# Stats Section
---------------------------------------------------------------*/
-.stats i {
+.about .content .read-more {
+  background: var(--accent-color);
   color: var(--contrast-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
-  width: 54px;
-  height: 54px;
-  font-size: 24px;
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding: 10px 24px 12px 24px;
   border-radius: 50px;
-  border: 2px solid var(--background-color);
+  transition: 0.3s;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  z-index: 1;
 }
 
-.stats .stats-item {
-  background-color: var(--surface-color);
-  margin-top: -27px;
-  padding: 30px 30px 25px 30px;
+.about .content .read-more i {
+  font-size: 18px;
+  margin-left: 5px;
+  line-height: 0;
+  transition: 0.3s;
+}
+
+.about .content .read-more:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  padding-right: 19px;
+}
+
+.about .content .read-more:hover i {
+  margin-left: 10px;
+}
+
+/*--------------------------------------------------------------
+# Counts Section
+--------------------------------------------------------------*/
+.counts {
+  padding: 25px 0;
+}
+
+.counts .stats-item {
+  padding: 30px;
   width: 100%;
-  position: relative;
-  text-align: center;
-  box-shadow: 0px 2px 35px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  z-index: 0;
 }
 
-.stats .stats-item span {
-  font-size: 32px;
+.counts .stats-item span {
+  font-size: 48px;
   display: block;
-  margin: 10px 0;
+  color: var(--accent-color);
   font-weight: 700;
-  color: var(--heading-color);
 }
 
-.stats .stats-item p {
+.counts .stats-item p {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
   padding: 0;
   margin: 0;
   font-family: var(--heading-font);
-  font-size: 16px;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 /*--------------------------------------------------------------
-# Services Section
+# Why Us Section
 --------------------------------------------------------------*/
-.services .service-item {
-  background-color: var(--surface-color);
-  text-align: center;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-  padding: 80px 20px;
-  transition: all ease-in-out 0.3s;
-  height: 100%;
-}
-
-.services .service-item .icon {
-  margin: 0 auto;
-  width: 64px;
-  height: 64px;
-  background: var(--accent-color);
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  transition: 0.3s;
-  transform-style: preserve-3d;
-}
-
-.services .service-item .icon i {
+.why-us .why-box {
   color: var(--contrast-color);
-  font-size: 28px;
-  transition: ease-in-out 0.3s;
-}
-
-.services .service-item .icon::before {
-  position: absolute;
-  content: "";
-  left: -8px;
-  top: -8px;
-  height: 100%;
-  width: 100%;
-  background: color-mix(in srgb, var(--accent-color), transparent 80%);
-  border-radius: 5px;
-  transition: all 0.3s ease-out 0s;
-  transform: translateZ(-1px);
-}
-
-.services .service-item h3 {
-  font-weight: 700;
-  margin: 10px 0 15px 0;
-  font-size: 22px;
-}
-
-.services .service-item p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.services .service-item:hover {
   background: var(--accent-color);
-  border-color: var(--accent-color);
+  padding: 30px;
 }
 
-.services .service-item:hover .icon {
+.why-us .why-box h3 {
+  color: var(--contrast-color);
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+.why-us .why-box p {
+  margin-bottom: 30px;
+}
+
+.why-us .why-box .more-btn {
+  display: inline-block;
+  background: color-mix(in srgb, var(--contrast-color), transparent 85%);
+  padding: 8px 40px 10px 40px;
+  color: var(--contrast-color);
+  transition: all ease-in-out 0.4s;
+  border-radius: 50px;
+}
+
+.why-us .why-box .more-btn i {
+  font-size: 14px;
+}
+
+.why-us .why-box .more-btn:hover {
+  color: var(--accent-color);
   background: var(--surface-color);
 }
 
-.services .service-item:hover .icon i {
-  color: var(--accent-color);
-}
-
-.services .service-item:hover .icon::before {
-  background: color-mix(in srgb, var(--background-color), transparent 70%);
-}
-
-.services .service-item:hover h3,
-.services .service-item:hover p {
-  color: var(--contrast-color);
-}
-
-/*--------------------------------------------------------------
-# Appointment Section
---------------------------------------------------------------*/
-.appointment .php-email-form {
-  width: 100%;
-}
-
-.appointment .php-email-form .form-group {
-  padding-bottom: 8px;
-}
-
-.appointment .php-email-form input,
-.appointment .php-email-form textarea,
-.appointment .php-email-form select {
-  color: var(--default-color);
-  background-color: transparent;
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-  padding: 10px !important;
-}
-
-.appointment .php-email-form input:focus,
-.appointment .php-email-form textarea:focus,
-.appointment .php-email-form select:focus {
-  border-color: var(--accent-color);
-}
-
-.appointment .php-email-form input::placeholder,
-.appointment .php-email-form textarea::placeholder,
-.appointment .php-email-form select::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.appointment .php-email-form input,
-.appointment .php-email-form select {
-  height: 44px;
-}
-
-.appointment .php-email-form textarea {
-  padding: 10px 12px;
-}
-
-.appointment .php-email-form button[type=submit] {
-  background: var(--accent-color);
-  border: 0;
-  padding: 10px 35px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.appointment .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
-}
-
-/*--------------------------------------------------------------
-# Departments Section
---------------------------------------------------------------*/
-.departments {
-  overflow: hidden;
-}
-
-.departments .nav-tabs {
-  border: 0;
-}
-
-.departments .nav-link {
-  border: 0;
-  padding: 12px 15px 12px 0;
-  transition: 0.3s;
-  color: var(--default-color);
-  border-radius: 0;
-  border-right: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  font-weight: 600;
-  font-size: 15px;
-}
-
-.departments .nav-link:hover {
-  color: var(--accent-color);
-}
-
-.departments .nav-link.active {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
-  background-color: var(--background-color);
-}
-
-.departments .tab-pane.active {
-  animation: fadeIn 0.5s ease-out;
-}
-
-.departments .details h3 {
-  font-size: 26px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.departments .details p {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-}
-
-.departments .details p:last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width: 992px) {
-  .departments .nav-link {
-    border: 0;
-    padding: 15px;
-  }
-
-  .departments .nav-link.active {
-    color: var(--accent-color);
-    background: var(--accent-color);
-  }
-}
-
-/*--------------------------------------------------------------
-# Doctors Section
---------------------------------------------------------------*/
-.doctors .team-member {
+.why-us .icon-box {
   background-color: var(--surface-color);
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  position: relative;
-  border-radius: 5px;
-  transition: 0.5s;
-  padding: 30px;
-  height: 100%;
-}
-
-@media (max-width: 468px) {
-  .doctors .team-member {
-    flex-direction: column;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-}
-
-.doctors .team-member .pic {
-  overflow: hidden;
-  width: 150px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.doctors .team-member .pic img {
-  transition: ease-in-out 0.3s;
-}
-
-.doctors .team-member:hover {
-  transform: translateY(-10px);
-}
-
-.doctors .team-member .member-info {
-  padding-left: 30px;
-}
-
-@media (max-width: 468px) {
-  .doctors .team-member .member-info {
-    padding: 30px 0 0 0;
-    text-align: center;
-  }
-}
-
-.doctors .team-member h4 {
-  font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 20px;
-}
-
-.doctors .team-member span {
-  display: block;
-  font-size: 15px;
-  padding-bottom: 10px;
-  position: relative;
-  font-weight: 500;
-}
-
-.doctors .team-member span::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 1px;
-  background: color-mix(in srgb, var(--default-color), transparent 85%);
-  bottom: 0;
-  left: 0;
-}
-
-@media (max-width: 468px) {
-  .doctors .team-member span::after {
-    left: calc(50% - 25px);
-  }
-}
-
-.doctors .team-member p {
-  margin: 10px 0 0 0;
-  font-size: 14px;
-}
-
-.doctors .team-member .social {
-  margin-top: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: start;
+  text-align: center;
+  padding: 40px 30px;
   width: 100%;
+  height: 100%;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
-@media (max-width: 468px) {
-  .doctors .team-member .social {
-    justify-content: center;
-  }
-}
-
-.doctors .team-member .social a {
-  background: color-mix(in srgb, var(--default-color), transparent 94%);
-  transition: ease-in-out 0.3s;
+.why-us .icon-box i {
+  color: var(--accent-color);
+  font-size: 32px;
+  margin-bottom: 30px;
+  background: color-mix(in srgb, var(--accent-color), transparent 95%);
+  border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50px;
-  width: 36px;
-  height: 36px;
+  width: 72px;
+  height: 72px;
+  transition: 0.3s;
 }
 
-.doctors .team-member .social a i {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  font-size: 16px;
-  margin: 0 2px;
+.why-us .icon-box h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 30px 0;
 }
 
-.doctors .team-member .social a:hover {
+.why-us .icon-box p {
+  font-size: 15px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.why-us .icon-box:hover i {
+  color: var(--contrast-color);
   background: var(--accent-color);
 }
 
-.doctors .team-member .social a:hover i {
-  color: var(--contrast-color);
+/*--------------------------------------------------------------
+# Features Section
+--------------------------------------------------------------*/
+.features {
+  padding: 10px 0;
 }
 
-.doctors .team-member .social a+a {
-  margin-left: 8px;
+.features .features-item {
+  background-color: var(--surface-color);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  transition: 0.3s;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  position: relative;
+}
+
+.features .features-item i {
+  font-size: 32px;
+  padding-right: 10px;
+  line-height: 0;
+}
+
+.features .features-item h3 {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 16px;
+}
+
+.features .features-item h3 a {
+  color: var(--heading-color);
+  transition: 0.3s;
+}
+
+.features .features-item:hover {
+  border-color: var(--accent-color);
+}
+
+.features .features-item:hover h3 a {
+  color: var(--accent-color);
 }
 
 /*--------------------------------------------------------------
-# Faq Section
+# Courses Section
 --------------------------------------------------------------*/
-.faq .faq-container .faq-item {
+.courses .course-item {
   background-color: var(--surface-color);
-  position: relative;
-  padding: 20px;
-  margin-bottom: 15px;
-  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 75%);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   border-radius: 5px;
-  overflow: hidden;
 }
 
-.faq .faq-container .faq-item:last-child {
-  margin-bottom: 0;
+.courses .course-content {
+  padding: 15px;
 }
 
-.faq .faq-container .faq-item h3 {
-  font-weight: 500;
+.courses .course-content h3 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.courses .course-content h3 a {
+  color: var(--heading-color);
+  transition: 0.3s;
+}
+
+.courses .course-content h3 a:hover {
+  color: var(--accent-color);
+}
+
+.courses .course-content .category {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-size: 14px;
+  padding: 6px 14px;
+  margin: 0;
+  border-radius: 5px;
+}
+
+.courses .course-content .price {
+  margin: 0;
+  font-weight: 700;
   font-size: 18px;
-  line-height: 24px;
-  margin: 0 30px 0 0;
-  transition: 0.3s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
-.faq .faq-container .faq-item h3 .num {
-  color: var(--accent-color);
-  padding-right: 5px;
+.courses .course-content .description {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
-.faq .faq-container .faq-item h3:hover {
-  color: var(--accent-color);
+.courses .trainer {
+  padding-top: 15px;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
-.faq .faq-container .faq-item .faq-content {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: 0.3s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
+.courses .trainer .trainer-profile img {
+  max-width: 50px;
+  border-radius: 50px;
 }
 
-.faq .faq-container .faq-item .faq-content p {
-  margin-bottom: 0;
-  overflow: hidden;
-}
-
-.faq .faq-container .faq-item .faq-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+.courses .trainer .trainer-profile .trainer-link {
+  padding-left: 10px;
+  font-weight: 600;
   font-size: 16px;
-  line-height: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
   transition: 0.3s;
-  cursor: pointer;
 }
 
-.faq .faq-container .faq-item .faq-toggle:hover {
+.courses .trainer .trainer-profile .trainer-link:hover {
   color: var(--accent-color);
 }
 
-.faq .faq-container .faq-active {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  color: var(--contrast-color);
+.courses .trainer .trainer-rank {
+  font-size: 18px;
+  color: color-mix(in srgb, var(--default-color), transparent 60%);
 }
 
-.faq .faq-container .faq-active h3,
-.faq .faq-container .faq-active h3:hover {
-  color: var(--contrast-color);
+.courses .trainer .trainer-rank .user-icon {
+  font-size: 22px;
 }
 
-.faq .faq-container .faq-active .faq-content {
-  grid-template-rows: 1fr;
-  visibility: visible;
-  opacity: 1;
+/*--------------------------------------------------------------
+# Trainers Index Section
+--------------------------------------------------------------*/
+.trainers-index .member {
+  background-color: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.trainers-index .member img {
+  margin: -1px -1px 30px -1px;
+}
+
+.trainers-index .member .member-content {
+  padding: 0 20px 30px 20px;
+}
+
+.trainers-index .member h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 18px;
+}
+
+.trainers-index .member span {
+  font-style: italic;
+  display: block;
+  font-size: 13px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.trainers-index .member p {
   padding-top: 10px;
+  font-size: 14px;
+  font-style: italic;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
 
-.faq .faq-container .faq-active .faq-toggle {
-  transform: rotate(90deg);
+.trainers-index .member .social {
+  margin-top: 15px;
+}
+
+.trainers-index .member .social a {
+  color: color-mix(in srgb, var(--default-color), transparent 60%);
+  transition: 0.3s;
+}
+
+.trainers-index .member .social a:hover {
   color: var(--accent-color);
+}
+
+.trainers-index .member .social i {
+  font-size: 18px;
+  margin: 0 2px;
+}
+
+/*--------------------------------------------------------------
+# About Us Section
+--------------------------------------------------------------*/
+.about-us .content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.about-us .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-us .content ul li {
+  padding-bottom: 10px;
+}
+
+.about-us .content ul i {
+  font-size: 1.25rem;
+  margin-right: 4px;
+  color: var(--accent-color);
+}
+
+.about-us .content p:last-child {
+  margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
-.testimonials .info h3 {
-  font-weight: 700;
-  font-size: 32px;
-}
-
-.testimonials .swiper {
-  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05);
-  background-color: var(--surface-color);
+.testimonials .testimonial-wrap {
+  padding-left: 50px;
 }
 
 .testimonials .testimonials-carousel,
@@ -1534,18 +1327,21 @@ section,
 }
 
 .testimonials .testimonial-item {
+  background-color: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   box-sizing: content-box;
+  padding: 30px 30px 30px 60px;
+  margin: 30px 15px;
   min-height: 200px;
   position: relative;
-  margin: 30px;
 }
 
 .testimonials .testimonial-item .testimonial-img {
   width: 90px;
-  height: 90px;
-  border-radius: 50px;
+  border-radius: 10px;
   border: 6px solid var(--background-color);
-  margin-right: 10px;
+  position: absolute;
+  left: -45px;
 }
 
 .testimonials .testimonial-item h3 {
@@ -1601,16 +1397,15 @@ section,
 
 .testimonials .swiper-pagination {
   margin-top: 20px;
-  margin-bottom: 20px;
   position: relative;
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  width: 12px;
+  height: 12px;
+  background-color: var(--background-color);
   opacity: 1;
-  border: none;
+  border: 1px solid var(--accent-color);
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
@@ -1618,6 +1413,9 @@ section,
 }
 
 @media (max-width: 767px) {
+  .testimonials .testimonial-wrap {
+    padding-left: 0;
+  }
 
   .testimonials .testimonials-carousel,
   .testimonials .testimonials-slider {
@@ -1625,30 +1423,392 @@ section,
   }
 
   .testimonials .testimonial-item {
+    padding: 30px;
     margin: 15px;
+  }
+
+  .testimonials .testimonial-item .testimonial-img {
+    position: static;
+    left: auto;
   }
 }
 
 /*--------------------------------------------------------------
-# Gallery Section
+# Courses Course Details Section
 --------------------------------------------------------------*/
-.gallery .gallery-item {
+.courses-course-details {
+  padding-bottom: 20px;
+}
+
+.courses-course-details h3 {
+  font-size: 24px;
+  margin: 30px 0 15px 0;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.courses-course-details h3:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  bottom: 0;
+  left: 0;
+}
+
+.courses-course-details h3:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: var(--accent-color);
+  bottom: 0;
+  left: 0;
+}
+
+.courses-course-details .course-info {
+  background: color-mix(in srgb, var(--default-color), transparent 95%);
+  padding: 10px 15px;
+  margin-bottom: 15px;
+}
+
+.courses-course-details .course-info h5 {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+  font-family: var(--nav-font);
+}
+
+.courses-course-details .course-info p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.courses-course-details .course-info a {
+  color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Tabs Section
+--------------------------------------------------------------*/
+.tabs {
+  padding-top: 30;
+}
+
+.tabs .nav-tabs {
+  border: 0;
+}
+
+.tabs .nav-link {
+  background-color: var(--background-color);
+  border: 0;
+  padding: 12px 15px;
+  transition: 0.3s;
+  color: var(--default-color);
+  border-radius: 0;
+  border-right: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.tabs .nav-link:hover {
+  color: var(--accent-color);
+}
+
+.tabs .nav-link.active {
+  background-color: var(--surface-color);
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.tabs .tab-pane.active {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.tabs .details h3 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.tabs .details p {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.tabs .details p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 992px) {
+  .tabs .nav-link {
+    border: 0;
+    padding: 15px;
+  }
+
+  .tabs .nav-link.active {
+    color: var(--accent-color);
+    background: var(--accent-color);
+  }
+}
+
+/*--------------------------------------------------------------
+# Trainers Section
+--------------------------------------------------------------*/
+.trainers .member {
+  position: relative;
+}
+
+.trainers .member .member-img {
+  margin: 0 80px;
+  border-radius: 50%;
   overflow: hidden;
-  border-right: 3px solid var(--background-color);
-  border-bottom: 3px solid var(--background-color);
+  position: relative;
 }
 
-.gallery .gallery-item img {
-  transition: all ease-in-out 0.4s;
+@media (max-width: 1024px) {
+  .trainers .member .member-img {
+    margin: 0 60px;
+  }
 }
 
-.gallery .gallery-item:hover img {
+.trainers .member .member-img img {
+  position: relative;
+  z-index: 1;
+}
+
+.trainers .member .member-img .social {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  padding-bottom: 20px;
+  transition: 0.3s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.trainers .member .member-img .social a {
+  transition: 0.3s;
+  color: var(--contrast-color);
+  font-size: 20px;
+  margin: 0 8px;
+}
+
+.trainers .member .member-img .social a:hover {
+  color: var(--accent-color);
+}
+
+.trainers .member .member-info {
+  margin-top: 30px;
+}
+
+.trainers .member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+.trainers .member .member-info span {
+  font-style: italic;
+  display: block;
+  font-size: 15px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin-bottom: 10px;
+}
+
+.trainers .member .member-info p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.trainers .member:hover .member-img .social {
+  padding-bottom: 0;
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Events Section
+--------------------------------------------------------------*/
+.events .card {
+  background-color: var(--background-color);
+  border: 0;
+  padding: 0 30px;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.events .card-img {
+  width: calc(100% + 60px);
+  margin-left: -30px;
+  overflow: hidden;
+  z-index: 9;
+  border-radius: 0;
+}
+
+.events .card-img img {
+  max-width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.events .card-body {
+  z-index: 10;
+  background: var(--surface-color);
+  border-top: 4px solid var(--surface-color);
+  padding: 30px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  margin-top: -60px;
+  transition: 0.3s;
+}
+
+.events .card-title {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.events .card-title a {
+  color: var(--default-color);
+  transition: 0.3s;
+}
+
+.events .card-text {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.events .card:hover img {
   transform: scale(1.1);
+}
+
+.events .card:hover .card-body {
+  border-color: var(--accent-color);
+}
+
+.events .card:hover .card-body .card-title a {
+  color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Pricing Section
+--------------------------------------------------------------*/
+.pricing .pricing-item {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing .pricing-item h3 {
+  margin: -20px -20px 20px -20px;
+  padding: 20px 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  background: color-mix(in srgb, var(--default-color), transparent 95%);
+}
+
+.pricing .pricing-item h4 {
+  font-size: 36px;
+  font-weight: 600;
+  font-family: var(--heading-font);
+}
+
+.pricing .pricing-item h4 sup {
+  font-size: 20px;
+  top: -15px;
+  left: -3px;
+}
+
+.pricing .pricing-item h4 span {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.pricing .pricing-item ul {
+  padding: 15px 0;
+  list-style: none;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.pricing .pricing-item ul li {
+  padding-bottom: 16px;
+}
+
+.pricing .pricing-item ul i {
+  color: var(--accent-color);
+  font-size: 18px;
+  padding-right: 4px;
+}
+
+.pricing .pricing-item ul .na {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  text-decoration: line-through;
+}
+
+.pricing .btn-wrap {
+  background: color-mix(in srgb, var(--default-color), transparent 95%);
+  margin: 0 -20px -20px -20px;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.pricing .btn-buy {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  display: inline-block;
+  padding: 8px 35px 10px 35px;
+  border-radius: 4px;
+  transition: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: var(--heading-font);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.pricing .btn-buy:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+.pricing .featured h3 {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.pricing .advanced {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  width: 200px;
+  position: absolute;
+  top: 18px;
+  right: -68px;
+  transform: rotate(45deg);
+  z-index: 1;
+  font-size: 14px;
+  padding: 1px 0 3px 0;
 }
 
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+.contact {
+  padding-top: 8px;
+  padding-bottom: 40px;
+}
+
 .contact .info-item+.info-item {
   margin-top: 40px;
 }
@@ -1657,8 +1817,8 @@ section,
   color: var(--contrast-color);
   background: var(--accent-color);
   font-size: 20px;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1712,7 +1872,7 @@ section,
   color: var(--contrast-color);
   background: var(--accent-color);
   border: 0;
-  padding: 10px 36px;
+  padding: 10px 30px 12px 30px;
   transition: 0.4s;
   border-radius: 50px;
 }
@@ -1726,4 +1886,19 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+#contact {
+  scroll-margin-top: 100px;
+}
+
+.country-box {
+  transition: 0.3s;
+}
+
+.country-box:hover {
+  transform: translateY(-8px);
 }

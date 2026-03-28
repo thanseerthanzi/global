@@ -1887,3 +1887,18 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+html {
+  scroll-behavior: smooth;
+}
+#contact {
+  scroll-margin-top: 100px;
+}
+
+.country-box {
+  transition: 0.3s;
+}
+
+.country-box:hover {
+  transform: translateY(-8px);
+}

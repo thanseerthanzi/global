@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
-
+import os
+SECRET_KEY = os.environ.get('SECRET_KEY')
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY
@@ -8,7 +9,7 @@ SECRET_KEY = 'django-insecure-332+)!7sygy4bh5icu(%%!fi7wdn)skp0(4^4q1pbp^444gbl=
 
 DEBUG = False  # IMPORTANT for production
 
-ALLOWED_HOSTS = ['.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['.railway.app', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -82,12 +83,10 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-
-# STATIC FILES (FIXED CLEAN)
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static"
+    BASE_DIR / "static",
 ]
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
@@ -99,3 +98,15 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# ================= EMAIL CONFIGURATION =================
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+EMAIL_HOST_USER = 'gcc@globalcarrierinfo.in'        # 🔁 replace with your Gmail
+EMAIL_HOST_PASSWORD = 'zhvt fxjc lvjj inli'      # 🔁 Gmail App Password
+
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

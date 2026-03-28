@@ -1,12 +1,11 @@
 from django.contrib import admin
 from django.urls import path
-from main.views import home, about, trainers, contact
+from main import views   
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-    path('', home, name='home'),
-    path('about/', about, name='about'),
-    path('trainers/', trainers, name='trainers'),
-    path('contact/', contact, name='contact'),
+    path('', views.home, name='home'),
+    path('about/', views.about, name='about'),
+    path('team/', views.team, name='team'),
+    path('contact/', views.contact, name='contact'),
 ]
