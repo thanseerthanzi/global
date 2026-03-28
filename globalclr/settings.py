@@ -9,7 +9,11 @@ SECRET_KEY = 'django-insecure-332+)!7sygy4bh5icu(%%!fi7wdn)skp0(4^4q1pbp^444gbl=
 
 DEBUG = False  # IMPORTANT for production
 
-ALLOWED_HOSTS = ['https://global-md7b.onrender.com']
+ALLOWED_HOSTS = [
+    'globalcarrier.onrender.com',
+    'localhost',
+    '127.0.0.1'
+]
 
 
 # Application definition
@@ -106,9 +110,8 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', 'gcc@globalcarrierinfo.in')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', 'zhvt fxjc lvjj inli')
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-
 DEBUG = False
-EMAIL_HOST_USER = 'gcc@globalcarrierinfo.in'        # 🔁 replace with your Gmail
-EMAIL_HOST_PASSWORD = 'zhvt fxjc lvjj inli' 
